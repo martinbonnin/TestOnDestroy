@@ -34,5 +34,4 @@ ENV PATH $PATH:$ANDROID_HOME/tools/bin
 # Install Android SDK components
 RUN echo y | sdkmanager --install 'platforms;android-27'
 
-RUN echo $pwd
-RUN ls
+ENTRYPOINT cat /proc/cpuinfo
