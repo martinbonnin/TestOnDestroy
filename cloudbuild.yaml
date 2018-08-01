@@ -1,5 +1,9 @@
 steps:
-- name: 'gcr.io/sixth-starlight-858/android-builder2'
-  args: ['./gradlew', 'assemble']
+- name: gcr.io/cloud-builders/gsutil
+  args: ['rsync', '-d', '-r', '/workspace/.gradle', 'gs://gradle_cache/.gradle']
+- name: 'gcr.io/sixth-starlight-858/android-builder'
+  args: ['./gradlew', '-g', '/workspace/.gradle', 'assemble']
+- name: gcr.io/cloud-builders/gsutil
+  args: ['rsync', '-d', '-r', 'gs://gradle_cache/.gradle', '/workspace/.gradle']
 options:
-  machineType: 'N1_HIGHCPU_32'
+  machineType: 'N1_HIGHCPU_8'
