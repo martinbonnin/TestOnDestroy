@@ -1,0 +1,6 @@
+unzip gradle.zip 
+./gradlew $@
+status=$?
+zip -r cache.zip .gradle
+echo "Exit status is: $status"
+exit $status
