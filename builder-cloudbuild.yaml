@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/android-builder',
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/android-builder2',
         '-t', 'gcr.io/$PROJECT_ID/packer',
         '.']
 images:
-- 'gcr.io/$PROJECT_ID/android-builder:latest'
+- 'gcr.io/$PROJECT_ID/android-builder2:latest'

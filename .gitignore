@@ -1,3 +1,5 @@
+app/app.iml
+build
 .idea
 local.properties
 testOnDestroy.iml
