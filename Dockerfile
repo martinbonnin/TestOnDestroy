@@ -11,7 +11,7 @@ COPY gradle-build /bin/
 
 # Download Android SDK tools
 RUN wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O sdk-tools.zip \
-    && unzip -d $ANDROID_HOME sdk-tools.zip \
+    && unzip -q -d $ANDROID_HOME sdk-tools.zip \
     && rm sdk-tools.zip
 
 ENV PATH $PATH:$ANDROID_HOME/tools/bin
