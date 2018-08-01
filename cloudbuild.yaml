@@ -2,8 +2,8 @@ steps:
 - name: 'ubuntu'
   args: ['mkdir', '-p', '/workspace/.gradle']
 - name: gcr.io/cloud-builders/gsutil
-  args: ['rsync', '-d', '-r', 'gs://gradle_cache/.gradle', '/workspace/.gradle']
+  args: ['rsync', '-d', '-r', 'gs://gradle_cache/', '/workspace/.gradle']
 - name: 'gcr.io/sixth-starlight-858/android-builder'
   args: ['./gradlew', '-g', '/workspace/.gradle', 'assemble']
 - name: gcr.io/cloud-builders/gsutil
-  args: ['rsync', '-d', '-r', '/workspace/.gradle', 'gs://gradle_cache/.gradle']
+  args: ['rsync', '-d', '-r', '/workspace/.gradle', 'gs://gradle_cache/']
