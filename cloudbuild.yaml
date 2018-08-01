@@ -1,3 +1,5 @@
 steps:
 - name: 'gcr.io/sixth-starlight-858/android-builder2'
   args: ['./gradlew', 'assemble']
+options:
+  machineType: 'N1_HIGHCPU_8'
