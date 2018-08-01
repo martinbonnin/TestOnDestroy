@@ -1,3 +1,3 @@
 steps:
-- name: 'ubuntu'
-  args: ['ls', '/workspace']
+- name: 'gcr.io/sixth-starlight-858/android-builder'
+  args: ['./gradlew', 'assemble']

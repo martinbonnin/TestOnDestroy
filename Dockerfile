@@ -5,13 +5,8 @@ RUN apt-get update
 
 RUN apt-get install -y git wget unzip
 
-# Download JDK 7
-# RUN wget -q --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz -O Jdk7.tar.gz && \
-#     tar -xzf Jdk7.tar.gz -C /opt && \
-#     rm Jdk7.tar.gz
-
 # Download JDK 8
-RUN wget "https://edelivery.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz"    --header "Cookie: oraclelicense=accept-securebackup-cookie" -O jdk8.tar.gz
+RUN wget -q "https://edelivery.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz"    --header "Cookie: oraclelicense=accept-securebackup-cookie" -O jdk8.tar.gz
 
 RUN tar -xzf jdk8.tar.gz -C /opt 
 
