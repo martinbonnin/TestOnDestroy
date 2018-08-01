@@ -7,7 +7,7 @@ RUN apt-get update \
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
-COPY gradle-build /bin
+COPY gradle-build /bin/
 
 # Download Android SDK tools
 RUN wget -q "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" -O sdk-tools.zip \
