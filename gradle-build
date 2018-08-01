@@ -1,5 +1,5 @@
 #!/bin/sh
-unzip -o -q gradle.zip 
+unzip -o -q cache.zip 
 ./gradlew $@
 status=$?
 zip -qr cache.zip .gradle
