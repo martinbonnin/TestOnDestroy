@@ -1,4 +1,4 @@
-FROM openjdk:8-slim
+FROM gcr.io/cloud-builders/javac
 
 # Install Dependencies
 RUN apt-get update \
